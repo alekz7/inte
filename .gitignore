@@ -1,0 +1,4 @@
+# no subir lo siguiente a github
+node_modules
+
+.env

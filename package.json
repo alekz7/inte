@@ -1,0 +1,36 @@
+{
+  "name": "inteli",
+  "version": "1.0.0",
+  "description": "test de intelimetrica",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alekz7/inte.git"
+  },
+  "keywords": [
+    "nodejs",
+    "mysql"
+  ],
+  "author": "Alejandro Aragon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alekz7/inte/issues"
+  },
+  "homepage": "https://github.com/alekz7/inte#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-mysql-session": "^2.1.4",
+    "express-session": "^1.17.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
