@@ -7,27 +7,6 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:3000/crud/add",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/crud/add",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"crud",
-						"add"
-					]
-				},
-				"description": "agregando registro"
-			},
-			"response": []
-		},
-		{
 			"name": "GET DATA",
 			"request": {
 				"method": "GET",
@@ -161,6 +140,41 @@
 					]
 				},
 				"description": "Actualiza un registro de acuerdo al id proporcionado, este id debe pertenecer al registro que se quiere actualizar"
+			},
+			"response": []
+		},
+		{
+			"name": "STATISTICS ENDPOINT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/restaurants/statistics?latitude=19.442036&longitude=-99.132756&radius=168",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"restaurants",
+						"statistics"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "19.442036"
+						},
+						{
+							"key": "longitude",
+							"value": "-99.132756"
+						},
+						{
+							"key": "radius",
+							"value": "168"
+						}
+					]
+				},
+				"description": "restaurants that fall inside the circle latitude longitude and radius"
 			},
 			"response": []
 		}
