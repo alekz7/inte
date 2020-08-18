@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "d10772a2-6217-481f-a8d9-6547d1398ef4",
+		"name": "intelimetrica",
+		"description": "set de pruebas para la api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/crud/add",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/crud/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"crud",
+						"add"
+					]
+				},
+				"description": "agregando registro"
+			},
+			"response": []
+		},
+		{
+			"name": "GET DATA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/crud",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"crud"
+					]
+				},
+				"description": "Ruta para obtener todos los restaurantes"
+			},
+			"response": []
+		},
+		{
+			"name": "ADD DATA",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"aaa\",\r\n    \"rating\": 5,\r\n    \"name\": \"AAA\",\r\n    \"site\": \"aaa\",\r\n    \"email\": \"aaa\",\r\n    \"phone\": \"aaa\",\r\n    \"street\": \"aaa\",\r\n    \"city\": \"aaa\",\r\n    \"state\": \"aaa\",\r\n    \"lat\": 99,\r\n    \"lng\": 88\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/crud/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"crud",
+						"add"
+					]
+				},
+				"description": "Agrega informacion a la base de datos"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE DATA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/crud/delete/1b413a3a-e894-4142-a954-37176f12003b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"crud",
+						"delete",
+						"1b413a3a-e894-4142-a954-37176f12003b"
+					]
+				},
+				"description": "Elimina el registro del id que se porporciona en la ruta de la peticion, este id se tiene que obtener de un registro existente en la base de datos (ejemplo crear un registro con id=\"aaa\" y posteriormente proporcionar este id para eliminar el registro)"
+			},
+			"response": []
+		},
+		{
+			"name": "GET DATA JUST ONE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/crud/edit/1d7e6cac-013e-404b-8d93-19d838ef30e1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"crud",
+						"edit",
+						"1d7e6cac-013e-404b-8d93-19d838ef30e1"
+					]
+				},
+				"description": "Devuelve un solo registro de la base de datos, obteniendo el registro mediante el id que se proporciona por parametro"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE DATA",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"rating\": 5,\r\n    \"name\": \"Nuevo nombre\",\r\n    \"site\": \"aaa\",\r\n    \"email\": \"nuevo email\",\r\n    \"phone\": \"aaa\",\r\n    \"street\": \"aaa\",\r\n    \"city\": \"aaa\",\r\n    \"state\": \"aaa\",\r\n    \"lat\": 99,\r\n    \"lng\": 88\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/crud/edit/1d7e6cac-013e-404b-8d93-19d838ef30e1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"crud",
+						"edit",
+						"1d7e6cac-013e-404b-8d93-19d838ef30e1"
+					]
+				},
+				"description": "Actualiza un registro de acuerdo al id proporcionado, este id debe pertenecer al registro que se quiere actualizar"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

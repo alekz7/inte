@@ -3,11 +3,20 @@ const express = require('express');
 const morgan  = require('morgan')
 const app     = express();
 const path    = require('path');
+const session = require('express-session');
+const MySQLStore = require('express-mysql-session');
+const { database } = require('./keys');
 
 // configuracion
 app.set('port',process.env.PORT || 3000);
 
 // middleware
+app.use(session({
+  secret:'alekzintelimetrica',
+  resave:false,
+  saveUninitialized:false,
+  store: new MySQLStore(database)
+}))
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
