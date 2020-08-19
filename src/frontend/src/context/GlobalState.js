@@ -3,7 +3,7 @@ import AppReducer from './AppReducer';
 
 // initial state
 const initialState = {
-  restaurants:[]
+  restaurants: []
 }
 
 // create context
@@ -15,10 +15,10 @@ export const GlobalProvider = ({children}) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   // actions
-  const deleteRestaurant = (id) => {
+  const getRestaurants = (restaurants) => {
     dispatch({
-      type: 'REMOVE_RESTAURANT',
-      payload: id
+      type: 'GET_RESTAURANTS',
+      payload: restaurants
     })
   }
 
@@ -26,6 +26,20 @@ export const GlobalProvider = ({children}) => {
     dispatch({
       type: 'ADD_RESTAURANT',
       payload: restaurant
+    })
+  }
+
+  const deleteRestaurant = (id) => {
+    dispatch({
+      type: 'REMOVE_RESTAURANT',
+      payload: id
+    })
+  }
+
+  const getRestaurant = (id) => {
+    dispatch({
+      type: 'GET_RESTAURANT',
+      payload: id
     })
   }
 
@@ -39,8 +53,10 @@ export const GlobalProvider = ({children}) => {
   return(
     <GlobalContext.Provider value={{
       restaurants: state.restaurants,
-      deleteRestaurant,
+      getRestaurants,
       addRestaurant,
+      deleteRestaurant,
+      getRestaurant,
       editRestaurant
     }}>
       {children}

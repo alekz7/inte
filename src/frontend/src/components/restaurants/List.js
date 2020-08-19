@@ -1,13 +1,20 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import {GlobalContext} from '../../context/GlobalState';
 import {Link} from 'react-router-dom';
 import {ListGroup, ListGroupItem, Button} from 'reactstrap';
 
 export const List = () => {
-  const {restaurants, deleteRestaurant} = useContext(GlobalContext);  
+  const {restaurants, deleteRestaurant, getRestaurants} = useContext(GlobalContext);
+
+  // useEffect(async()=>{
+  //   let result = await fetch('/crud/');
+  //   let data = await result.json();
+  //   getRestaurants(data);
+  // },[])
+
   return (
     <ListGroup className='mt-4'>      
-      {restaurants.length > 0 ? (
+      {restaurants && (restaurants.length > 0) ? (
         <>
         {restaurants.map(restaurant=>(
           <ListGroupItem className='d-flex' key={restaurant.id}>
