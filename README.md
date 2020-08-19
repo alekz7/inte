@@ -10,6 +10,6 @@ src/frontend/build
 # database
 mysql deployed in clever cloud
 
-*endpoints
+# endpoints
 in postman collection
 postman_collection/intelimetrica.postman_collection.json
