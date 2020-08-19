@@ -8,7 +8,7 @@ const MySQLStore = require('express-mysql-session');
 const { database } = require('./keys');
 
 // configuracion
-app.set('port',process.env.PORT || 3000);
+app.set('port',process.env.PORT);
 
 // middleware
 app.use(session({
