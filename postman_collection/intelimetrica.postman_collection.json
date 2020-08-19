@@ -12,12 +12,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/crud",
-					"protocol": "http",
+					"raw": "https://intelime.herokuapp.com/crud",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"intelime",
+						"herokuapp",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"crud"
 					]
@@ -47,12 +48,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/crud/add",
-					"protocol": "http",
+					"raw": "https://intelime.herokuapp.com/crud/add",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"intelime",
+						"herokuapp",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"crud",
 						"add"
@@ -68,16 +70,17 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/crud/delete/1b413a3a-e894-4142-a954-37176f12003b",
-					"protocol": "http",
+					"raw": "https://intelime.herokuapp.com/crud/delete/aaa",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"intelime",
+						"herokuapp",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"crud",
 						"delete",
-						"1b413a3a-e894-4142-a954-37176f12003b"
+						"aaa"
 					]
 				},
 				"description": "Elimina el registro del id que se porporciona en la ruta de la peticion, este id se tiene que obtener de un registro existente en la base de datos (ejemplo crear un registro con id=\"aaa\" y posteriormente proporcionar este id para eliminar el registro)"
@@ -90,12 +93,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/crud/edit/1d7e6cac-013e-404b-8d93-19d838ef30e1",
-					"protocol": "http",
+					"raw": "https://intelime.herokuapp.com/crud/edit/1d7e6cac-013e-404b-8d93-19d838ef30e1",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"intelime",
+						"herokuapp",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"crud",
 						"edit",
@@ -127,12 +131,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/crud/edit/1d7e6cac-013e-404b-8d93-19d838ef30e1",
-					"protocol": "http",
+					"raw": "https://intelime.herokuapp.com/crud/edit/1d7e6cac-013e-404b-8d93-19d838ef30e1",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"intelime",
+						"herokuapp",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"crud",
 						"edit",
@@ -149,12 +154,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/restaurants/statistics?latitude=19.442036&longitude=-99.132756&radius=168",
-					"protocol": "http",
+					"raw": "https://intelime.herokuapp.com/restaurants/statistics?latitude=19.442036&longitude=-99.132756&radius=168",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"intelime",
+						"herokuapp",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"restaurants",
 						"statistics"
